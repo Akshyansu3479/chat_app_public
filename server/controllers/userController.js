@@ -35,8 +35,8 @@ module.exports.register = async (req, res, next) => {
     });
     delete user.password;
     return res.json({ status: true, user });
-  } catch (ex) {
-    next(ex);
+  } catch (err) {
+    return res.json({"error from register controller": err})
   }
 };
 
