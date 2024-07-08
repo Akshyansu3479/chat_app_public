@@ -62,6 +62,7 @@ export default function Register() {
   };
 
   const handleSubmit = async (event) => {
+    // console.log(registerRoute);
     event.preventDefault();
     if (handleValidation()) {
       const { email, username, password } = values;
